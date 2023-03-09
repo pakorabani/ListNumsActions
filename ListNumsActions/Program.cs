@@ -29,7 +29,8 @@ namespace ListNumsActions
                         //TODO
                         break;
                     case "remove":
-                        //TODO
+                       int index = int.Parse(cmd[1]);
+                        nums.RemoveAt(index);
                         break;
                     //TODO
 
