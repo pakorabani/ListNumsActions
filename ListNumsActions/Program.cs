@@ -25,6 +25,9 @@ namespace ListNumsActions
                     case "del":
                         //TODO
                         break;
+                    case "print":
+                        Console.WriteLine(string.Join(" ", nums));
+                        break;
                     case "contains":
                         //TODO
                         break;
