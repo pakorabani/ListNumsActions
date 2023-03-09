@@ -35,6 +35,14 @@ namespace ListNumsActions
                     case "remove":
                         //TODO
                         break;
+                    case "large":
+                        index = int.Parse(cmd[1]);
+                        List<int> FilterList = nums.FindAll(x => x > index);
+                        foreach (var num in FilterList)  
+                        {  
+                            Console.WriteLine(num);  
+                        }   
+                        break;
                     //TODO
 
                     default:
