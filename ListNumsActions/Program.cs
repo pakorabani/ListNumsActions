@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,14 +20,14 @@ namespace ListNumsActions
                 switch (command)
                 {
                     case "ins":
-                        //TODO
+                        var index = int.Parse(cmd[1]);
+                        var element = int.Parse(cmd[2]);
+                        nums.Insert(index, element);
                         break;
                     case "del":
-                        var index = int.Parse(cmd[1]);
+                        index = int.Parse(cmd[1]);
+                        index = int.Parse(cmd[1]);
                         nums.RemoveAt(index);
-                        break;
-                    case "print":
-                        Console.WriteLine(string.Join(" ", nums));
                         break;
                     case "print":
                         Console.WriteLine(string.Join(" ", nums));
@@ -45,6 +45,12 @@ namespace ListNumsActions
                         break;
                     case "remove":
                         //TODO
+                        break;
+                    case "add":
+                        index = int.Parse(cmd[1]);
+                        element = int.Parse(cmd[2]);
+                        int result = index + element;
+                        nums.Add(result);
                         break;
                     case "countl":
                         int listel = int.Parse(cmd[1]);
