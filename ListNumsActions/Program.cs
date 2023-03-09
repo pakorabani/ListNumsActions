@@ -23,7 +23,11 @@ namespace ListNumsActions
                         //TODO
                         break;
                     case "del":
-                        //TODO
+                        var index = int.Parse(cmd[1]);
+                        nums.RemoveAt(index);
+                        break;
+                    case "print":
+                        Console.WriteLine(string.Join(" ", nums));
                         break;
                     case "print":
                         Console.WriteLine(string.Join(" ", nums));
@@ -46,6 +50,13 @@ namespace ListNumsActions
                         int listel = int.Parse(cmd[1]);
                         List<int> CountList = nums.FindAll(x => x > listel);
                         Console.WriteLine(CountList.Count);
+                    case "large":
+                        index = int.Parse(cmd[1]);
+                        List<int> FilterList = nums.FindAll(x => x > index);
+                        foreach (var num in FilterList)  
+                        {  
+                            Console.WriteLine(num);  
+                        }   
                         break;
                     //TODO
 
