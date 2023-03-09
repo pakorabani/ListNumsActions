@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,21 +20,61 @@ namespace ListNumsActions
                 switch (command)
                 {
                     case "ins":
-                        //TODO
+                        var index = int.Parse(cmd[1]);
+                        var element = int.Parse(cmd[2]);
+                        nums.Insert(index, element);
                         break;
                     case "del":
-                        var index = int.Parse(cmd[1]);
+                        index = int.Parse(cmd[1]);
+                        index = int.Parse(cmd[1]);
                         nums.RemoveAt(index);
                         break;
                     case "print":
                         Console.WriteLine(string.Join(" ", nums));
                         break;
+                    case "print":
+                        Console.WriteLine(string.Join(" ", nums));
+                        break;
                     case "contains":
-                        //TODO
+                        int el = int.Parse(cmd[1]);
+                        if (nums.Contains(el))
+                        {
+                            Console.WriteLine("YES");
+                        }
+                        else
+                        {
+                            Console.WriteLine("NO");
+                        }
                         break;
                     case "remove":
-                        //TODO
+                       int index = int.Parse(cmd[1]);
+                        nums.RemoveAt(index);
                         break;
+                    case "cut":
+                        index = int.Parse(cmd[1]);
+                        if (index>=nums.Count)
+                        {
+                            nums.Clear();
+                        }
+                        else
+                        {
+                            for (int i = 0; i < index; i++)
+                            {
+                                nums.RemoveAt(0);
+                            }
+                        }
+                       
+                        break;
+                    case "add":
+                        index = int.Parse(cmd[1]);
+                        element = int.Parse(cmd[2]);
+                        int result = index + element;
+                        nums.Add(result);
+                        break;
+                    case "countl":
+                        int listel = int.Parse(cmd[1]);
+                        List<int> CountList = nums.FindAll(x => x > listel);
+                        Console.WriteLine(CountList.Count);
                     case "large":
                         index = int.Parse(cmd[1]);
                         List<int> FilterList = nums.FindAll(x => x > index);
@@ -44,7 +84,6 @@ namespace ListNumsActions
                         }   
                         break;
                     //TODO
-
                     default:
                         break;
                 }
