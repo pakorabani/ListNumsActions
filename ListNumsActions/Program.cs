@@ -34,12 +34,7 @@ namespace ListNumsActions
                         //TODO
                         break;
                     case "add":
-                        List<int> result = new List<int>();
-                        for (int i = 0; i < nums.Count; i ++)
-                        {
-                            result.Add(nums[i] + nums[i]);
-                        }
-                        nums = result;
+                     
                         break;
                     default:
                         break;
