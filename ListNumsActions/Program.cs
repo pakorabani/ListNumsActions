@@ -29,12 +29,27 @@ namespace ListNumsActions
                     case "print":
                         Console.WriteLine(string.Join(" ", nums));
                         break;
+                    case "print":
+                        Console.WriteLine(string.Join(" ", nums));
+                        break;
                     case "contains":
-                        //TODO
+                        int el = int.Parse(cmd[1]);
+                        if (nums.Contains(el))
+                        {
+                            Console.WriteLine("YES");
+                        }
+                        else
+                        {
+                            Console.WriteLine("NO");
+                        }
                         break;
                     case "remove":
                         //TODO
                         break;
+                    case "countl":
+                        int listel = int.Parse(cmd[1]);
+                        List<int> CountList = nums.FindAll(x => x > listel);
+                        Console.WriteLine(CountList.Count);
                     case "large":
                         index = int.Parse(cmd[1]);
                         List<int> FilterList = nums.FindAll(x => x > index);
