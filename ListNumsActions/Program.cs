@@ -32,6 +32,9 @@ namespace ListNumsActions
                     case "print":
                         Console.WriteLine(string.Join(" ", nums));
                         break;
+                    case "print":
+                        Console.WriteLine(string.Join(" ", nums));
+                        break;
                     case "contains":
                         int el = int.Parse(cmd[1]);
                         if (nums.Contains(el))
@@ -44,7 +47,23 @@ namespace ListNumsActions
                         }
                         break;
                     case "remove":
-                        //TODO
+                       int index = int.Parse(cmd[1]);
+                        nums.RemoveAt(index);
+                        break;
+                    case "cut":
+                        index = int.Parse(cmd[1]);
+                        if (index>=nums.Count)
+                        {
+                            nums.Clear();
+                        }
+                        else
+                        {
+                            for (int i = 0; i < index; i++)
+                            {
+                                nums.RemoveAt(0);
+                            }
+                        }
+                       
                         break;
                     case "add":
                         index = int.Parse(cmd[1]);
@@ -65,7 +84,6 @@ namespace ListNumsActions
                         }   
                         break;
                     //TODO
-
                     default:
                         break;
                 }
