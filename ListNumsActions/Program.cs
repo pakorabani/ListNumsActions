@@ -42,6 +42,11 @@ namespace ListNumsActions
                     case "remove":
                         //TODO
                         break;
+                    case "countl":
+                        int listel = int.Parse(cmd[1]);
+                        List<int> CountList = nums.FindAll(x => x > listel);
+                        Console.WriteLine(CountList.Count);
+                        break;
                     //TODO
 
                     default:
