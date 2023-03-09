@@ -25,6 +25,9 @@ namespace ListNumsActions
                     case "del":
                         //TODO
                         break;
+                    case "print":
+                        Console.WriteLine(string.Join(" ", nums));
+                        break;
                     case "contains":
                         int el = int.Parse(cmd[1]);
                         if (nums.Contains(el))
