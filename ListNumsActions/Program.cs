@@ -23,7 +23,11 @@ namespace ListNumsActions
                         //TODO
                         break;
                     case "del":
-                        //TODO
+                        var index = int.Parse(cmd[1]);
+                        nums.RemoveAt(index);
+                        break;
+                    case "print":
+                        Console.WriteLine(string.Join(" ", nums));
                         break;
                     case "contains":
                         //TODO
