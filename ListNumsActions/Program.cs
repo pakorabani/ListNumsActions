@@ -38,7 +38,10 @@ namespace ListNumsActions
                         //TODO
                         break;
                     case "add":
-                     
+                        index = int.Parse(cmd[1]);
+                        element = int.Parse(cmd[2]);
+                        int result = index + element;
+                        nums.Add(result);
                         break;
                     default:
                         break;
