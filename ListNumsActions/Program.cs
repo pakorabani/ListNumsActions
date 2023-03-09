@@ -25,7 +25,7 @@ namespace ListNumsActions
                         nums.Insert(index, element);
                         break;
                     case "del":
-                        var index = int.Parse(cmd[1]);
+                        index = int.Parse(cmd[1]);
                         nums.RemoveAt(index);
                         break;
                     case "print":
