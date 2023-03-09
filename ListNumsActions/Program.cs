@@ -35,7 +35,21 @@ namespace ListNumsActions
                        int index = int.Parse(cmd[1]);
                         nums.RemoveAt(index);
                         break;
-                    //TODO
+                    case "cut":
+                        index = int.Parse(cmd[1]);
+                        if (index>=nums.Count)
+                        {
+                            nums.Clear();
+                        }
+                        else
+                        {
+                            for (int i = 0; i < index; i++)
+                            {
+                                nums.RemoveAt(0);
+                            }
+                        }
+                       
+                        break;
 
                     default:
                         break;
